@@ -1,18 +1,18 @@
-## Ribbon Link Identification
+# Ribbon Link Identification
 
 A computational tool for automating the identification of ribbon links using topological invariants and obstruction theory. This project systematically analyzes links up to 14 crossings to identify potential ribbon links from the KnotInfo and LinkInfo databases.
-# Overview
+## Overview
 This project automates the process of identifying ribbon links by applying a series of mathematical obstructions and topological invariants. The analysis covers:
 
 Data up to 11 crossings: Sourced from the LinkInfo database
 Data for 12-14 crossings: Extracted from SnapPy objects
 Systematic filtering: Using multiple mathematical criteria to identify potential ribbon links
 
-# Mathematical Background
-## What are Ribbon Links?
+## Mathematical Background
+### What are Ribbon Links?
 Ribbon links are a special type of links that bounds a disk that crashes through itself. 
 
-## Obstructions Used
+### Obstructions Used
 The project employs six key mathematical obstructions to filter potential ribbon links:
 
 Alexander Polynomial: Must equal zero
