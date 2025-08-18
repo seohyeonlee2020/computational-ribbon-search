@@ -4,9 +4,9 @@ A computational tool for automating the identification of ribbon links using top
 ## Overview
 This project automates the process of identifying ribbon links by applying a series of mathematical obstructions and topological invariants. The analysis covers:
 
-Data up to 11 crossings: Sourced from the LinkInfo database
-Data for 12-14 crossings: Extracted from SnapPy objects
-Systematic filtering: Using multiple mathematical criteria to identify potential ribbon links
+ - Data up to 11 crossings: Sourced from the LinkInfo database
+ - Data for 12-14 crossings: Extracted from SnapPy objects
+ - Systematic filtering: Using multiple mathematical criteria to identify potential ribbon links
 
 ## Mathematical Background
 ### What are Ribbon Links?
