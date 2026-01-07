@@ -1,0 +1,30 @@
+import snappy
+import pandas as pd
+import numpy as np
+import math
+
+df = pd.read_csv('/Users/seohyeonlee/knotinfo/results/checked_against_ribbon_census.csv')
+known_ribbons = df[df['known_ribbon']]
+
+#calculate range of ribbon number for known ribbon links using bounds given in theorem 6 and 9
+#both lower bounds, where are upper bounds then
+def calculate_ribbon_number(row):
+    name = row['name_unoriented']
+    link = snappy.Link(name)
+    alex_poly = link.alexander_polynomial()
+    det =  alex_poly(q=-1)
+    print(f'name {name} det {det}')
+
+    #plug in bound derived from thm 6 det(L)
+    #log2(det^2-1)
+  #  row['lower_bound_with_det'] = math.floor(math.log2(det**2 - 1)) + 1
+
+    #thm 9
+    # r(L) >= log9(abs(jones_determinant))
+    jones_det = row['jones_determinant']
+    row['lower_bound_jones_det'] = math.log(np.abs(jones_det), 9)
+    return row
+
+known_ribbons_with_bounds = known_ribbons.apply(lambda row: calculate_ribbon_number(row), axis=1)
+df.to_csv('/Users/seohyeonlee/knotinfo/results/ribbon_number_lowerbounds.csv', index=False)
+
