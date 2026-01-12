@@ -1,12 +1,12 @@
 import snappy
-
-
 import pandas as pd
 import numpy as np
 import re
 
 #load extracted data
 df = pd.read_csv('/Users/seohyeonlee/knotinfo/results/preliminary_screening_all.csv')
+
+
 print(f'filtered knots based on first 2 obstructions, {df.shape[0]} potential ribbon links')
 
 #check against snappy ribbon census

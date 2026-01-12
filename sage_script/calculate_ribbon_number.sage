@@ -11,8 +11,8 @@ known_ribbons = df[df['known_ribbon']]
 def calculate_ribbon_number(row):
     name = row['name_unoriented']
     link = snappy.Link(name)
-    alex_poly = link.alexander_polynomial()
-    det =  alex_poly(q=-1)
+    alex_poly = link.alexander_polynomial
+   # det =  alex_poly(q=-1)
     print(f'name {name} det {det}')
 
     #plug in bound derived from thm 6 det(L)
